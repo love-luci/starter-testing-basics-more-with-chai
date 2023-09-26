@@ -12,7 +12,7 @@ describe("medianScore", () => {
     ];
     const actual = medianScore(students);
     const expected = 8.4;
-    expect(actual).to.be.a("number");
+    //expect(actual).to.be.a("number"); unneccessary when using .to.equal() -> this runs a strict test, like using ===
     expect(actual).to.equal(expected);
   });
 });
@@ -28,7 +28,7 @@ describe("topScoringStudent", () => {
     ];
     const actual = topScoringStudent(students);
     const expected = { name: "Riley Morgan", score: 9.8 };
-    expect(actual).to.be.an("object");
-    expect(actual).to.equal(expected);
+    //expect(actual).to.be.an("object"); unneccessary when using .to.equal();
+    expect(actual).to.eql(expected); // to.eql() checks for the content of arrays/objects instead of just matching the results
   });
 });
